@@ -8,7 +8,7 @@ from plotly.subplots import make_subplots
 
 
 def get_all_history(security, start_date, end_date, period):
-    df = ma.Stock(security).candles(start=start_date, end=end_date, period=period)
+    df = ma.Ticker(security).candles(start=start_date, end=end_date, period=period)
     df.set_index('begin', inplace = True)
     return df
 

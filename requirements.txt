@@ -2,6 +2,6 @@ streamlit
 pandas
 numpy
 plotly
-moexalgo
+moexalgo>=0.3.0
 scipy
 statsmodels

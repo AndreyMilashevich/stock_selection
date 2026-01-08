@@ -1,45 +1,11 @@
 import pandas as pd
 import numpy as np
-from sklearn import linear_model
-import matplotlib.pyplot as plt
-import seaborn as sns
-import catboost
-from catboost import CatBoostClassifier, CatBoostRegressor
-from sklearn import metrics
-from sklearn.linear_model import LinearRegression, LogisticRegression
-from sklearn.model_selection import cross_val_score, train_test_split
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.tree import plot_tree, export_graphviz
-from sklearn.linear_model import Ridge, Lasso
-from sklearn.model_selection import GridSearchCV
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import StratifiedKFold, KFold, cross_val_score
-from sklearn.ensemble import GradientBoostingRegressor, GradientBoostingClassifier, HistGradientBoostingClassifier, HistGradientBoostingRegressor, RandomForestClassifier, RandomForestRegressor
-from lightgbm import LGBMClassifier, LGBMRegressor
-from sklearn.metrics import get_scorer
-from scipy.stats import uniform, randint
-import optuna
-from joblib import dump, load
-from statsmodels.stats.proportion import proportions_ztest
-import yfinance as yf
-import ta
-import investpy
-from moex import MOEX
-import requests
-from xgboost import XGBClassifier, XGBRegressor
-from sklearn.metrics import classification_report, root_mean_squared_error, r2_score, mean_absolute_error, mean_squared_error
-from imblearn.over_sampling import SMOTE
 import moexalgo as ma
-import mplfinance as mpf
-from prophet import Prophet
 from datetime import datetime, timedelta
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-from statsmodels.tsa.stattools import coint
-from statsmodels.api import OLS
-import statsmodels.api as sm
-from scipy.stats import pearsonr, spearmanr
+
 
 def get_all_history(security, start_date, end_date, period):
     df = ma.Stock(security).candles(start=start_date, end=end_date, period=period)
